@@ -1,0 +1,22 @@
+
+First install motion:
+
+~> sudo apt-get install motion
+Then create a config file:
+
+~> mkdir ~/.motion
+~> nano ~/.motion/motion.conf
+
+Type this into the file.
+
+stream_port 8081
+stream_localhost off
+webcontrol_port 8080
+webcontrol_localhost off
+width 2560 
+height 144
+
+Hit CTRL+X to exit 
+Hit Y to save
+
+Download and Install Putty on HOST computer.
