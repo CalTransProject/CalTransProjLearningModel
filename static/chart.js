@@ -176,8 +176,8 @@ var time2 = ["","","","","",""],truck2 = [0,0,0,0,0,0],vehicle2 = [0,0,0,0,0,0]
 var time3 = ["","","","","",""],truck3 = [0,0,0,0,0,0],vehicle3 = [0,0,0,0,0,0]
 var time4 = ["","","","","",""],truck4 = [0,0,0,0,0,0],vehicle4 = [0,0,0,0,0,0]
 var update_mychart = function (res) {
-        //res是json格式的response对象
-        // 隐藏加载动画
+        //res is the response instance of json format
+        // hide the loading animations 
         myChart.hideLoading();
         myChart2.hideLoading();
         myChart3.hideLoading();
@@ -186,7 +186,7 @@ var update_mychart = function (res) {
         let localData = res.preds;
         let countVehicle = 0,countTruck = 0;
 
-        // 准备数据
+        // prepare the data 
         console.log(res);
         time.push(res.fid);
         truck.push(res.Truck);
@@ -226,7 +226,7 @@ var update_mychart = function (res) {
 
 
 
-        // 填入数据
+        // load the data into the charts
         myChart.setOption({
              legend: {
                 data:[localData[0].label,localData[1].label,localData[2].label]
@@ -237,12 +237,12 @@ var update_mychart = function (res) {
             },
             series: [{
                 name: 'truck',
-                // name: res[0].label , // 根据名字对应到相应的系列
+                // name: res[0].label , // feed the data to the corrsponding series
                 data: truck
             },
             {
                 name:'vehicle',
-                // name: res[0].label , // 根据名字对应到相应的系列
+                // name: res[0].label , // feed the data to the corrsponding series
                 data: vehicle
             }
             ]
@@ -273,12 +273,12 @@ var update_mychart = function (res) {
             },
             series: [{
                 name: 'truck',
-                // name: res[0].label , // 根据名字对应到相应的系列
+                // name: res[0].label , // feed the data to the corrsponding series
                 data: truck
             },
             {
                 name:'vehicle',
-                // name: res[0].label , // 根据名字对应到相应的系列
+                // name: res[0].label , // feed the data to the corrsponding series
                 data: vehicle
             }
             ]
